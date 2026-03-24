@@ -1,12 +1,12 @@
 # Modelo-Conceitual-E-commerce-Entidade-de-Relacionamento-Estendida-
 "Esquema conceitual para sistema de oficina mecânica, com controle de ordens de serviço, clientes, veículos, equipes de mecânicos, serviços e peças. Projeto desenvolvido para organizar processos de manutenção e revisões, garantindo rastreabilidade e integridade dos dados."
-📌 Projeto Oficina Mecânica – Esquema Conceitual 
+ Projeto Oficina Mecânica – Esquema Conceitual 
 
-🎯 Objetivo 
+ Objetivo 
 
 Este projeto tem como finalidade implementar um esquema conceitual para controle e gerenciamento de ordens de serviço em uma oficina mecânica. O trabalho foi desenvolvido como parte da formação SQL Database Specialist (DIO), utilizando MySQL Workbench para modelagem e geração do banco de dados. 
 
-📝 Narrativa 
+ Narrativa 
 
 Clientes levam veículos à oficina mecânica para consertos ou revisões periódicas. 
 
@@ -20,7 +20,7 @@ Os mecânicos possuem código, nome, endereço e especialidade.
 
 Cada OS possui número, data de emissão, valor, status e data de conclusão. 
 
-🗂️ Entidades Principais 
+ Entidades Principais 
 
 Cliente: dados pessoais e contato. 
 
@@ -38,7 +38,7 @@ Peça: nome e valor unitário.
 
 ItensOS: tabela de ligação que detalha os serviços e peças aplicados em cada OS. 
 
-🔗 Relacionamentos 
+ Relacionamentos 
 
 Cliente (1:N) Veículo 
 
@@ -68,9 +68,9 @@ O valor final da OS é calculado pela soma dos serviços e peças.
 
 Observação: em oficinas pequenas, muitas vezes não existe OS formal. No entanto, neste modelo conceitual, a OS é obrigatória para garantir rastreabilidade, autorização do cliente e controle financeiro. 
 
-🚀 Impacto na Oficina Mecânica 
+ Impacto na Oficina Mecânica 
 
-🔧 Dores Reais Resolvidas 
+ Dores Reais Resolvidas 
 
 Desorganização de ordens de serviço → elimina papéis soltos e informações perdidas. 
 
@@ -84,7 +84,7 @@ Gestão de equipe ineficiente → atribuição clara de equipes e mecânicos.
 
 Histórico inexistente → consultas rápidas sobre serviços anteriores de cada veículo. 
 
-⏱️ Tempo Economizado 
+ Tempo Economizado 
 
 Emissão rápida de OS sem burocracia. 
 
@@ -94,9 +94,9 @@ Histórico centralizado evita retrabalho.
 
 Distribuição de tarefas otimizada entre mecânicos. 
 
-👉 Estimativa: redução de 20–30% do tempo administrativo. 
+ Estimativa: redução de 20–30% do tempo administrativo. 
 
-💰 Lucros Gerados 
+ Lucros Gerados 
 
 Cobrança precisa evita perda de receita. 
 
@@ -106,9 +106,9 @@ Transparência aumenta confiança e fidelização de clientes.
 
 Equipes mais produtivas → menos horas ociosas. 
 
-👉 Resultado: margens de lucro podem crescer em 10–15%. 
+ Resultado: margens de lucro podem crescer em 10–15%. 
 
-📈 Otimizações Estratégicas 
+ Otimizações Estratégicas 
 
 Organização centralizada em um único sistema. 
 
@@ -118,7 +118,7 @@ Escalabilidade: oficina pode crescer sem perder controle.
 
 Relatórios estratégicos: serviços mais frequentes, peças mais usadas, desempenho das equipes. 
 
-⚙️ Tecnologias Utilizadas 
+ Tecnologias Utilizadas 
 
 MySQL Workbench (modelagem EER e Forward Engineer). 
 
@@ -126,7 +126,7 @@ MySQL Server (execução do script SQL).
 
 GitHub (documentação e versionamento). 
 
-📂 Estrutura do Repositório 
+* Estrutura-do-Repositório-
 
 script_oficina.sql → Script SQL gerado pelo Forward Engineer. 
 
