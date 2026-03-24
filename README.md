@@ -32,7 +32,9 @@ Este projeto foi desenvolvido como parte da formação **SQL Database Specialist
 
 #  Relacionamentos
 - Cliente (1:N) Veículo  
-- Veículo (1:1) Equipe  
+- Veículo (1:1) Equipe
+- > Observação: O relacionamento Veículo–Equipe foi modelado como 1:1 para atender à narrativa do projeto, representando a ideia de que uma equipe trabalha em um veículo por vez. Em cenários reais, esse relacionamento poderia ser expandido para N:1, permitindo que uma equipe atenda vários veículos ao longo do tempo.
+
 - Equipe (1:N) Mecânico  
 - Equipe (1:N) Ordem de Serviço  
 - Ordem de Serviço (N:M) Serviço  
