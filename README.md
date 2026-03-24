@@ -4,6 +4,9 @@
 Implementar um esquema conceitual para controle e gerenciamento de ordens de serviço em uma oficina mecânica, garantindo rastreabilidade, organização e integridade dos dados.  
 Este projeto foi desenvolvido como parte da formação **SQL Database Specialist (DIO)**, utilizando MySQL Workbench para modelagem e geração do banco de dados.
 
+> Este projeto foi desenvolvido simulando a entrega de um engenheiro de dados júnior para uma equipe sênior, levando em consideração metas e prazos reais de uma empresa. Foi elaborado com atenção aos detalhes e mentalidade de aplicação prática em um cenário corporativo .
+
+
 # Narrativa
 - Clientes levam veículos à oficina mecânica para consertos ou revisões periódicas.  
 - Cada veículo é designado a uma Equipe de Mecânicos, responsável por avaliar e executar os serviços.  
