@@ -80,9 +80,12 @@ Este projeto foi desenvolvido como parte da formação **SQL Database Specialist
 - **GitHub** → documentação e versionamento.  
 
 #  Estrutura do Repositório
-- `script_oficina.sql` → Script SQL gerado pelo Forward Engineer.
--  
+
 - `diagrama_oficina.png` → Diagrama EER exportado do Workbench.
--  
+- 
+-  <img width="690" height="588" alt="Captura de tela 2026-03-23 222722" src="https://github.com/user-attachments/assets/1ace29f2-aae7-4ea8-9a43-20eeaccfddb0" />
+
+<img width="569" height="520" alt="Captura de tela 2026-03-23 212011" src="https://github.com/user-attachments/assets/2f909e2b-5615-444e-961f-c1c08ad5e138" />
+
 - `README.md` → Documentação do projeto (este arquivo).
 -   
