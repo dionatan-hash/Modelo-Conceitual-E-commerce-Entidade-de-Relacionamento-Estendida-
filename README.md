@@ -47,7 +47,7 @@ Este projeto foi desenvolvido como parte da formação **SQL Database Specialist
 # **Impacto na Oficina Mecânica** **E**
 
 #  **Dores Reais Resolvidas**
-- Perda de informações críticas → substituição de registros em papel por sistema digital, garantindo rastreabilidade completa.  
+- **Perda de informações críticas → substituição de registros em papel por sistema digital, garantindo rastreabilidade completa.**  
 - **Falta de controle financeiro** → cálculo automático e padronizado de mão de obra e peças, evitando erros e prejuízos.  
 - **Gestão ineficiente de equipes** → atribuição clara de veículos e OS para cada equipe, otimizando carga de trabalho.  
 - **Desperdício de peças e estoque desorganizado** → registro detalhado de peças utilizadas em cada OS, reduzindo custos e perdas.  
