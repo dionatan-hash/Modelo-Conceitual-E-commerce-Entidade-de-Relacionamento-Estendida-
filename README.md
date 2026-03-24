@@ -1,135 +1,88 @@
-# Modelo-Conceitual-E-commerce-Entidade-de-Relacionamento-Estendida-
-"Esquema conceitual para sistema de oficina mecânica, com controle de ordens de serviço, clientes, veículos, equipes de mecânicos, serviços e peças. Projeto desenvolvido para organizar processos de manutenção e revisões, garantindo rastreabilidade e integridade dos dados."
- Projeto Oficina Mecânica – Esquema Conceitual 
-
-# **Objetivo** 
-
-Este projeto tem como finalidade implementar um esquema conceitual para controle e gerenciamento de ordens de serviço em uma oficina mecânica. O trabalho foi desenvolvido como parte da formação SQL Database Specialist (DIO), utilizando MySQL Workbench para modelagem e geração do banco de dados. 
-
- # **Narrativa** 
-
-Clientes levam veículos à oficina mecânica para consertos ou revisões periódicas. 
-
-Cada veículo gera uma Ordem de Serviço (OS), que é atribuída a uma equipe de mecânicos. 
-
-A equipe avalia o veículo, identifica os serviços necessários e registra na OS, incluindo data de emissão e previsão de conclusão. 
-
-O valor da OS é composto pela soma dos serviços (consultados em tabela de referência de mão de obra) e das peças utilizadas. 
-
-Os mecânicos possuem código, nome, endereço e especialidade. 
-
-Cada OS possui número, data de emissão, valor, status e data de conclusão. 
-
- # **Entidades Principais** 
-
-Cliente: dados pessoais e contato. 
-
-Veículo: placa, modelo, ano, vinculado ao cliente. 
-
-Ordem de Serviço (OS): número, datas, valor, status, vínculo com veículo e equipe. 
-
-Equipe: grupo de mecânicos responsáveis pela execução. 
-
-Mecânico: código, nome, endereço, especialidade, vinculado a uma equipe. 
-
-Serviço: descrição e valor de mão de obra. 
-
-Peça: nome e valor unitário. 
-
-ItensOS: tabela de ligação que detalha os serviços e peças aplicados em cada OS. 
-
- # **Relacionamentos** 
-
-Cliente (1:N) Veículo 
-
-Veículo (1:N) Ordem de Serviço 
-
-Ordem de Serviço (N:1) Equipe 
-
-Equipe (1:N) Mecânico 
-
-Ordem de Serviço (1:N) ItensOS 
-
-ItensOS (N:1) Serviço 
-
-ItensOS (N:1) Peça 
-
-#  **Fluxo de Negócio** 
-
-O cliente registra o veículo. 
-
-O veículo gera uma Ordem de Serviço quando precisa de manutenção ou revisão. 
-
-A OS é atribuída a uma Equipe, composta por vários Mecânicos. 
-
-A OS detalha os Serviços e Peças através da tabela ItensOS. 
-
-O valor final da OS é calculado pela soma dos serviços e peças. 
-
-Observação: em oficinas pequenas, muitas vezes não existe OS formal. No entanto, neste modelo conceitual, a OS é obrigatória para garantir rastreabilidade, autorização do cliente e controle financeiro. 
-
- Impacto na Oficina Mecânica 
-
- # **Dores Reais Resolvidas** 
-
-Desorganização de ordens de serviço → elimina papéis soltos e informações perdidas. 
-
-Falta de controle sobre peças e serviços → cada item é registrado, evitando prejuízos. 
-
-Cálculo impreciso de valores → preços padronizados de mão de obra e peças. 
-
-Atrasos e falta de previsibilidade → datas de emissão e conclusão registradas. 
-
-Gestão de equipe ineficiente → atribuição clara de equipes e mecânicos. 
-
-Histórico inexistente → consultas rápidas sobre serviços anteriores de cada veículo. 
-
- # **Tempo Economizado** 
-
-Emissão rápida de OS sem burocracia. 
-
-Consulta imediata de preços e serviços. 
-
-Histórico centralizado evita retrabalho. 
-
-Distribuição de tarefas otimizada entre mecânicos. 
-
- Estimativa: redução de 20–30% do tempo administrativo. 
-
-# **Lucros Gerados**
-
-Cobrança precisa evita perda de receita. 
-
-Controle de estoque reduz desperdício de peças. 
-
-Transparência aumenta confiança e fidelização de clientes. 
-
-Equipes mais produtivas → menos horas ociosas. 
-
-#**Resultado**: margens de lucro podem crescer em 10–15%. 
-
- Otimizações Estratégicas 
-
-Organização centralizada em um único sistema. 
-
-Transparência para clientes e gestores. 
-
-Escalabilidade: oficina pode crescer sem perder controle. 
-
-Relatórios estratégicos: serviços mais frequentes, peças mais usadas, desempenho das equipes. 
-
-# **Tecnologias Utilizadas** 
-
-MySQL Workbench (modelagem EER e Forward Engineer). 
-
-MySQL Server (execução do script SQL). 
-
-GitHub (documentação e versionamento). 
-
-# ** Estrutura do Repositório**
-
-script_oficina.sql → Script SQL gerado pelo Forward Engineer. 
-
-diagrama_oficina.png → Diagrama EER exportado do Workbench. 
-
-README.md → Documentação do projeto (este arquivo). 
+#  Projeto Oficina Mecânica – Esquema Conceitual
+
+#  Objetivo
+Implementar um esquema conceitual para controle e gerenciamento de ordens de serviço em uma oficina mecânica, garantindo rastreabilidade, organização e integridade dos dados.  
+Este projeto foi desenvolvido como parte da formação **SQL Database Specialist (DIO)**, utilizando MySQL Workbench para modelagem e geração do banco de dados.
+
+# Narrativa
+- Clientes levam veículos à oficina mecânica para consertos ou revisões periódicas.  
+- Cada veículo é designado a uma Equipe de Mecânicos, responsável por avaliar e executar os serviços.  
+- A equipe identifica os serviços necessários e gera uma Ordem de Serviço (OS), com data de emissão, previsão de entrega, status e valor total.  
+- O valor da OS é composto pela soma dos serviços (consultados em tabela de referência de mão de obra) e das peças utilizadas.  
+- O cliente autoriza a execução dos serviços.  
+- Os mecânicos possuem código, nome, endereço e especialidade.  
+
+# Entidades Principais
+- **Cliente** → dados pessoais e contato.
+- 
+- **Veículo** → placa, modelo, ano, vinculado ao cliente.
+-   
+- **Equipe** → grupo de mecânicos responsáveis pelo veículo.
+- 
+- **Mecânico** → código, nome, endereço, especialidade, vinculado a uma equipe.
+-  
+- **Ordem de Serviço (OS)** → número, datas, valor, status, vínculo com veículo e equipe.
+- 
+- **Serviço** → descrição, valor de mão de obra, tempo estimado e categoria.
+- 
+- **Peça** → nome, valor unitário e quantidade.  
+
+#  Relacionamentos
+- Cliente (1:N) Veículo  
+- Veículo (1:1) Equipe  
+- Equipe (1:N) Mecânico  
+- Equipe (1:N) Ordem de Serviço  
+- Ordem de Serviço (N:M) Serviço  
+- Serviço (1:N) Peça  
+
+#  Fluxo de Negócio
+1. O Cliente registra o Veículo.  
+2. O Veículo é atribuído a uma Equipe responsável.  
+3. A Equipe é composta por vários Mecânicos.  
+4. A Equipe gera Ordens de Serviço para os veículos que atende.  
+5. Cada Ordem de Serviço detalha os Serviços realizados.  
+6. Cada Serviço pode utilizar várias Peças.  
+7. O valor final da OS é calculado pela soma dos serviços e peças.  
+
+# **Impacto na Oficina Mecânica**
+
+#  **Dores Reais Resolvidas**
+- Perda de informações críticas → substituição de registros em papel por sistema digital, garantindo rastreabilidade completa.  
+- **Falta de controle financeiro** → cálculo automático e padronizado de mão de obra e peças, evitando erros e prejuízos.  
+- **Gestão ineficiente de equipes** → atribuição clara de veículos e OS para cada equipe, otimizando carga de trabalho.  
+- **Desperdício de peças e estoque desorganizado** → registro detalhado de peças utilizadas em cada OS, reduzindo custos e perdas.  
+- **Ausência de histórico confiável** → consultas rápidas sobre serviços anteriores de cada veículo, fortalecendo relacionamento com clientes.  
+- **Baixa transparência para o cliente** → OS formalizada com valores e prazos, aumentando confiança e fidelização.  
+
+##  Tempo Economizado
+- Emissão rápida de OS sem burocracia.  
+- Consulta imediata de preços e serviços.  
+- Histórico centralizado evita retrabalho.  
+- Distribuição otimizada de tarefas entre mecânicos.  
+- Estimativa: **redução de 20–30% do tempo** administrativo.  
+
+##  Lucros Gerados
+- Cobrança precisa evita perda de receita.  
+- Controle de estoque reduz desperdício de peças.  
+- Transparência aumenta confiança e fidelização de clientes.  
+- Equipes mais produtivas → menos horas ociosas.  
+- Margens de lucro podem crescer em **10–15%**.  
+
+#  Diferenciais Competitivos
+- **Escalabilidade**: modelo pronto para expansão da oficina sem perda de controle.  
+- **Visão estratégica**: relatórios sobre serviços mais frequentes, peças mais usadas e desempenho das equipes.  
+- **Profissionalização**: sistema formaliza processos, elevando a credibilidade da oficina.  
+- **Integração**: dados centralizados permitem análises financeiras e operacionais em tempo real.  
+
+#  Tecnologias Utilizadas
+- **MySQL Workbench** → modelagem EER e Forward Engineer.  
+- **MySQL Server** → execução do script SQL.  
+- **GitHub** → documentação e versionamento.  
+
+#  Estrutura do Repositório
+- `script_oficina.sql` → Script SQL gerado pelo Forward Engineer.
+-  
+- `diagrama_oficina.png` → Diagrama EER exportado do Workbench.
+-  
+- `README.md` → Documentação do projeto (este arquivo).
+-   
