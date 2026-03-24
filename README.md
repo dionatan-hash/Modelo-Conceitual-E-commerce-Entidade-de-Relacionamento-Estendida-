@@ -44,7 +44,7 @@ Este projeto foi desenvolvido como parte da formação **SQL Database Specialist
 6. Cada Serviço pode utilizar várias Peças.  
 7. O valor final da OS é calculado pela soma dos serviços e peças.  
 
-# **Impacto na Oficina Mecânica**
+# **Impacto na Oficina Mecânica** **E**
 
 #  **Dores Reais Resolvidas**
 - Perda de informações críticas → substituição de registros em papel por sistema digital, garantindo rastreabilidade completa.  
